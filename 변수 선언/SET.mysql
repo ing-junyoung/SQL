@@ -1,1 +1,52 @@
-# SET 함수는 새로운 변수(컬럼)을 선언할 때 주로 사용한다. 
+SET 함수는 새로운 변수(컬럼)을 선언할 때 주로 사용한다.
+
+
+Example Table 생성 
+
+
+# 1 
+
+CREATE TABLE dept(
+
+deptno CHAR(1) PRIMARY KEY,
+deptname VARCHAR(20),
+deptlic VARCHAR(20)
+);
+
+INSERT INTO dept VALUES('1' , '데이터분석' , '서울');
+INSERT INTO dept VALUES('2' , '웹개발' , '용인');
+INSERT INTO dept VALUES('3' , '마케팅' , '수원');
+INSERT INTO dept VALUES('4' , '영업관리' , '의정부');
+INSERT INTO dept VALUES('5' , 'AI' , '성남');
+
+
+# 2 
+
+CREATE TABLE emp(
+
+empno CHAR(4) PRIMARY KEY,
+empname VARCHAR(10),
+deptno CHAR(2),
+salary INT(5),
+birthdate DATE
+)
+
+INSERT INTO emp VALUES('1001' , '이준영' , '1' , 9999 , '1993-09-17');
+INSERT INTO emp VALUES('1002' , '노승찬' , '1' , 9765 , '1997-11-13');
+INSERT INTO emp VALUES('1003' , '태민우' , '5' , 9121 , '1995-10-26');
+INSERT INTO emp VALUES('1004' , '안희영' , '2' , 9865 , '1993-10-23');
+INSERT INTO emp VALUES('1005' , '퉁이2' , '4' , 5334 , '1995-09-17');
+INSERT INTO emp VALUES('1006' , '퉁이3' , '3' , 2421 , '1996-09-17');
+INSERT INTO emp VALUES('1007' , '퉁이4' , '3' , 6532 , '1997-09-17');
+INSERT INTO emp VALUES('1008' , '퉁이5' , '3' , 777 , '1998-09-17');
+
+
+
+
+
+# 
+SET @변수명 = 변수값; 
+
+(작성중)
+# 
+
